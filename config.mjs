@@ -14,7 +14,7 @@ StyleDictionary.registerTransform({
     return (
       typeof token.value === 'object' && 
       token.value !== null && 
-      (token.type === 'boxShadow' || token.type === 'dropShadow' || 'blur' in token.value)
+      (token.type === 'boxShadow' || token.type === 'innerShadow' || token.type === 'dropShadow' || 'blur'  in token.value)
     );
   },
   transform: (token) => {
