@@ -34,7 +34,7 @@
             font-size: var(--ex-btn-font-size); /* Déjà en px grâce à sd-transforms */
             border-radius: var(--ex-btn-radius);
             padding: var(--ex-btn-pad-sm) var(--ex-btn-pad-md);
-            
+            box-shadow: var(--ex-btn-box-shad); 
             border: none;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -44,7 +44,7 @@
         }
 
             .btn-poc:hover {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+            box-shadow: var(--ex-btn-box-shad-hover); 
 
         }
 
@@ -72,7 +72,7 @@
         <p>Ce catalogue est alimenté en temps réel par les variables Figma via GitHub et Style Dictionary.</p>
         
         <div class="card">
-            <h2 style="margin-top:0">Composant : Button</h2>
+            <h2 style="margin-top:0">Composant : Button Primary</h2>
             
             <div class="component-section">
                 <div class="grid">
