@@ -1,0 +1,28 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --green100: #5ee998;
+  --white100: #ffffff;
+  --grey50: #e8e8e8;
+  --grey100: #a4a4a4;
+  --dark100: #0a2d19;
+  --fontPrimary: Arial;
+  --fontPrimaryWeight: Bold;
+  --radiusSm: 10;
+  --spacingSm: 20;
+  --spacingMd: 30;
+  --fontPrimarySize: 20;
+  --btnPrimaryActiveBg: #5ee998;
+  --btnPrimaryClickedBg: #ffffff;
+  --btnPrimaryDisabledBg: #e8e8e8;
+  --btnPrimaryActiveFontColor: #0a2d19;
+  --btnDisabledFontColor: #a4a4a4;
+  --btnFontFam: Arial;
+  --btnFontWeight: Bold;
+  --btnRadius: 10;
+  --btnPadSm: 20;
+  --btnPadMd: 30;
+  --btnFontSize: 20;
+}

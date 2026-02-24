@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System POC - Catalogue</title>
+    <link rel="stylesheet" href="./build/css/variables.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            padding: 40px; 
+            background-color: #f9fafb;
+            color: #111827;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { 
+            background: white; 
+            padding: 32px; 
+            border-radius: 12px; 
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+        }
+        .component-section { margin-top: 32px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 16px; }
+        
+        /* LE BOUTON PILOTÉ PAR TES TOKENS FIGMA */
+        .btn-poc {
+            /* Variables issues de ton build/css/variables.css */
+            background-color: var(--btn-primary-active-bg);
+            color: var(--btn-primary-active-font-color);
+            font-family: var(--btn-font-fam);
+            font-weight: var(--btn-font-weight);
+            font-size: var(--btn-font-size); /* Déjà en px grâce à sd-transforms */
+            border-radius: var(--btn-radius);
+            padding: var(--btn-pad-sm) var(--btn-pad-md);
+            
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* État "Clicked" (Simulé par une classe) */
+        .btn-poc.clicked { 
+            background-color: var(--btn-primary-clicked-bg); 
+        }
+
+        /* État "Disabled" */
+        .btn-poc:disabled { 
+            background-color: var(--btn-primary-disabled-bg); 
+            color: var(--btn-disabled-font-color);
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .label { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 600; color: #6b7280; text-transform: uppercase; }
+        h1 { margin-bottom: 8px; }
+        p { color: #4b5563; margin-bottom: 24px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Design System POC</h1>
+        <p>Ce catalogue est alimenté en temps réel par les variables Figma via GitHub et Style Dictionary.</p>
+        
+        <div class="card">
+            <h2 style="margin-top:0">Composant : Button</h2>
+            
+            <div class="component-section">
+                <div class="grid">
+                    <div>
+                        <span class="label">Default (Active)</span>
+                        <button class="btn-poc">Primary Action</button>
+                    </div>
+                    <div>
+                        <span class="label">Clicked State</span>
+                        <button class="btn-poc clicked">Clicked</button>
+                    </div>
+                    <div>
+                        <span class="label">Disabled State</span>
+                        <button class="btn-poc" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

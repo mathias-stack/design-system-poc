@@ -1,0 +1,12 @@
+{
+  "name": "design-system-poc",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build-tokens": "node config.mjs"
+  },
+  "devDependencies": {
+    "@tokens-studio/sd-transforms": "^2.0.3",
+    "style-dictionary": "^5.3.1"
+  }
+}
